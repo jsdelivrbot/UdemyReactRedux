@@ -1,15 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
 
-import App from './components/app';
-import reducers from './reducers';
+const API_KEY = 'AIzaSyASmFcxp0E7yKABNeGzlgIdFGXcNpCpTXM';
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+
+
+// Create a new component. This component produces HTML
+const App = () => {
+  return <div> Hello World </div>;
+}
+
+// Specify that react will put the component's
+// generated HTML in the DOM
+// Select an instance of the App class
+ // and specify where in the DOM you want to render this
+ReactDOM.render(<App />, document.querySelector('.container'));
